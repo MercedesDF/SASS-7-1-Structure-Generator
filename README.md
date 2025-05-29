@@ -3,6 +3,8 @@
 
 Este documento describe el "SASS 7-1 Structure Generator", una aplicación web del lado del cliente diseñada para ayudar a iniciar rápidamente nuevos proyectos web con una estructura de directorios y archivos SASS 7-1 bien organizada.
 
+[Ver aplicación en acción](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?logo=github)](https://mercedesdf.github.io/SASS-7-1-Structure-Generator/)
+
 ## ¿Qué hace?
 
 La aplicación genera un archivo `.zip` que contiene:
@@ -67,5 +69,7 @@ Para modificar este generador:
 *   La estructura de archivos generada y sus contenidos se definen en `services/generationService.ts` y `constants/fileTemplates.ts`.
 
 ---
+
+🚀 [Ver Demo](https://mercedesdf.github.io/SASS-7-1-Structure-Generator/)
 
 Creado por [mercedev](https://github.com/mercedev)
