@@ -1,0 +1,6 @@
+{
+  "name": "SASS 7-1 Structure Generator v.1.0.0",
+  "description": "Una aplicación para generar una estructura de directorios y archivos SASS 7-1, incluyendo una configuración básica de Vite, README y Licencia. Ideal para iniciar nuevos proyectos web con una configuración SASS estructurada.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
