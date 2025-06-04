@@ -4,7 +4,7 @@ import { generateSassStructure } from './services/generationService';
 import { createZipAndDownload } from './services/zipService';
 import type { OutputFile } from './types';
 
-// Original Download Icon for ZIP
+// Icono de descarga original para ZIP.
 const DownloadIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
     <path fillRule="evenodd" d="M12 2.25a.75.75 0 0 1 .75.75v11.69l3.22-3.22a.75.75 0 1 1 1.06 1.06l-4.5 4.5a.75.75 0 0 1-1.06 0l-4.5-4.5a.75.75 0 1 1 1.06-1.06l3.22 3.22V3a.75.75 0 0 1 .75-.75Zm-9 13.5a.75.75 0 0 1 .75.75v2.25a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V16.5a.75.75 0 0 1 1.5 0v2.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V16.5a.75.75 0 0 1 .75-.75Z" clipRule="evenodd" />
@@ -17,7 +17,7 @@ const GitHubIcon: React.FC<{ className?: string }> = ({ className }) => (
   </svg>
 );
 
-// ExternalLinkIcon is no longer used in the UI by default
+// ExternalLinkIcon ya no se utiliza en la interfaz de usuario por defecto
 // const ExternalLinkIcon: React.FC<{ className?: string }> = ({ className }) => (
 //   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 //     <path fillRule="evenodd" d="M15.75 2.25H21a.75.75 0 01.75.75v5.25a.75.75 0 01-1.5 0V4.81L8.03 17.03a.75.75 0 01-1.06-1.06L19.19 3.75h-3.44a.75.75 0 010-1.5zm-10.5 4.5A.75.75 0 003.75 6v13.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V15a.75.75 0 00-1.5 0v4.5a.75.75 0 01-.75.75H5.25a.75.75 0 01-.75-.75V6.75a.75.75 0 00-.75-.75z" clipRule="evenodd" />
@@ -32,7 +32,7 @@ const LinkedInIcon: React.FC<{ className?: string }> = ({ className }) => (
 
 const APP_VERSION = "1.0.0";
 const GITHUB_REPO_URL = "https://github.com/MercedesDF/SASS-7-1-Structure-Generator";
-// const DEPLOYED_APP_URL = "https://mercedev.github.io/sass-7-1-generator/"; // Placeholder - Icon removed from UI
+// const DEPLOYED_APP_URL = "https://mercedev.github.io/sass-7-1-generator/"; // Placeholder - Ícono eliminado de la interfaz de usuario.
 const LINKEDIN_URL = "https://www.linkedin.com/in/mercedesdf-ingenieria/";
 
 const App: React.FC = () => {
@@ -60,10 +60,6 @@ const App: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-sky-400 mb-3">
             SASS 7-1 Structure Generator
           </h1>
-          {/* First subtitle line removed based on image annotation */}
-          {/* <p className="text-slate-200 text-lg">
-            Crea rápidamente carpetas y archivos básicos, listos para rellenar. Modifícalos a tu gusto.
-          </p> */}
           <p className="text-sm text-slate-200 mt-2 italic opacity-70">Incluye configuración de Vite, README, Licencia y archivos SASS fundamentales.</p>
         </header>
 
@@ -84,11 +80,11 @@ const App: React.FC = () => {
             <p className="text-base text-slate-200 mb-4">
               V {APP_VERSION}
             </p>
-            <div className="flex justify-center space-x-6 mb-6"> {/* Adjusted space-x for two icons */}
+            <div className="flex justify-center space-x-6 mb-6"> {/* Espacio entre dos íconos. */}
               <a href={GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" aria-label="Ver el repositorio en GitHub" className="text-slate-200 hover:text-sky-400 transition-colors duration-200">
                 <GitHubIcon className="w-6 h-6" />
               </a>
-              {/* ExternalLinkIcon and its link removed */}
+             
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="Contactar en LinkedIn" className="text-slate-200 hover:text-sky-400 transition-colors duration-200">
                 <LinkedInIcon className="w-6 h-6" />
               </a>
@@ -104,9 +100,8 @@ const App: React.FC = () => {
         )}
 
         <footer className="mt-10 pt-6 border-t border-slate-700 text-center">
-           <div className="text-xs text-slate-300"> {/* Removed flex, flex-col, gap-3 as only one item left */}
-            {/* Footer text "Generador SASS 7-1 por mercedev" removed */}
-            {/* Footer text "Contacto: mercedev@mercedev.es" removed */}
+           <div className="text-xs text-slate-300"> 
+         
             <p>© 2025</p>
           </div>
         </footer>

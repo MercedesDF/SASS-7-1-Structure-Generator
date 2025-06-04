@@ -1,8 +1,7 @@
-
 export const MAIN_JS_CONTENT = `
 import './sass/main.scss';
 
-console.log('SASS 7-1 structure initialized. Styles loaded via src/sass/main.scss. Open index.html to see a test page.');
+console.log('SASS 7-1 structure initialized. Estilos cargados desde src/sass/main.scss. Abre index.html para ver una página de prueba.');
 `;
 
 export const GENERATED_INDEX_HTML_CONTENT = `<!DOCTYPE html>
@@ -12,7 +11,7 @@ export const GENERATED_INDEX_HTML_CONTENT = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SASS 7-1 Structure Test</title>
     <meta name="description" content="Test page for the generated SASS 7-1 structure.">
-    <!-- The main.js file will import main.scss -->
+    <!-- El archivo main.js se importará de main.scss -->
     <script type="module" src="/src/main.js"></script>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; line-height: 1.6; margin: 0; background-color: #f4f7f6; color: #333; padding: 20px; }
@@ -36,25 +35,25 @@ export const GENERATED_INDEX_HTML_CONTENT = `<!DOCTYPE html>
 </head>
 <body>
     <div class="container">
-        <h1>SASS 7-1 Structure Test Page</h1>
-        <p>This page is included in your generated SASS 7-1 project structure to help you test your local setup.</p>
-        <p>It links to <code>/src/main.js</code>, which in turn imports <code>./sass/main.scss</code> from within the <code>src</code> directory.</p>
-        <p>If you've followed the setup instructions in <code>README.md</code> (installing Vite and SASS, and running <code>npm run dev</code> or <code>yarn dev</code>), this page should be served by Vite. Any global styles or test styles you add to your SASS files should apply here.</p>
+        <h1>Página de Prueba de la Estructura SASS 7-1</h1>
+        <p>Esta página está incluida en la estructura del proyecto SASS 7-1 que has generado para ayudarte a probar tu configuración local.</p>
+        <p>Enlaza a <code>/src/main.js</code>, que a su vez importa <code>./sass/main.scss</code> desde el directorio <code>src</code>.</p>
+        <p>Si has seguido las instrucciones de configuración en <code>README.md</code> (instalando Vite y SASS, y ejecutando <code>npm run dev</code> o <code>yarn dev</code>), esta página debería ser servida por Vite. Cualquier estilo global o estilo de prueba que agregues a tus archivos SASS debería aplicarse aquí.</p>
 
         <div class="styled-by-sass">
-            <p><strong>This box is for testing SASS integration.</strong></p>
-            <p>Try adding a simple rule to <code>src/sass/base/_typography.scss</code>, for example:</p>
+            <p><strong>Esta caja es para probar la integración de SASS.</strong></p>
+            <p>Intenta agregar una regla simple a <code>src/sass/base/_typography.scss</code>, por ejemplo:</p>
             <p><code>body { background-color: #e0f7fa; }</code></p>
-            <p>Save the file, and see if this page updates automatically (Hot Module Replacement via Vite)!</p>
+            <p>Guarda el archivo y verifica si esta página se actualiza automáticamente (Hot Module Replacement a través de Vite)!</p>
         </div>
 
-        <h2>Next Steps:</h2>
+        <h2>Próximos Pasos:</h2>
         <ul>
-            <li>Explore the <code>src/sass</code> directory and start customizing the SASS partials (e.g., <code>src/sass/abstracts/_variables.scss</code>). Many partials now automatically import variables for easier use.</li>
-            <li>Refer to <code>README.md</code> for detailed explanations of the 7-1 SASS architecture and how to use it.</li>
-            <li>Begin building out your project's components and layouts!</li>
+            <li>Explora el directorio <code>src/sass</code> y comienza a personalizar los parciales SASS (por ejemplo, <code>src/sass/abstracts/_variables.scss</code>). Muchos parciales ahora importan automáticamente variables para facilitar su uso.</li>
+            <li>Consulta <code>README.md</code> para obtener explicaciones detalladas sobre la arquitectura SASS 7-1 y cómo utilizarla.</li>
+            <li>¡Comienza a construir los componentes y diseños de tu proyecto!</li>
         </ul>
-        <p class="footer-note">This <code>index.html</code> is for local development and testing purposes. You will likely replace its content with your project's actual HTML structure as you build your application.</p>
+        <p class="footer-note">Este <code>index.html</code> es para fines de desarrollo y prueba local. Es probable que reemplaces su contenido con la estructura HTML real de tu proyecto a medida que construyes tu aplicación.</p>
     </div>
 </body>
 </html>
@@ -211,20 +210,20 @@ Revisa el archivo \`LICENSE\` y reemplaza \`"{COPYRIGHT_HOLDER}"\` con tu nombre
 
 export const VITE_CONFIG_JS_CONTENT = `
 import { defineConfig } from 'vite';
-// import react from '@vitejs/plugin-react'; // Uncomment if using React
+// import react from '@vitejs/plugin-react'; // Descomentar si se usa React.
 
 export default defineConfig({
-  // plugins: [react()], // Uncomment if using React
+  // plugins: [react()], // Descomentar si se usa React.
   server: {
-    // open: true, // Automatically open the app in the browser on server start
+    // open: true, // Abrir automáticamente la aplicación en el navegador al iniciar el servidor
   },
   css: {
     preprocessorOptions: {
       scss: {
-        // You can add global SASS imports here if necessary,
-        // though the 7-1 pattern usually handles this via @use and @forward.
-        // example: additionalData: \\\`@use "./src/sass/abstracts/variables" as *;\\\`
-        // Note: Many partials now automatically include this kind of import.
+        // Puedes agregar importaciones SASS globales aquí si es necesario,
+        // aunque el patrón 7-1 generalmente maneja esto a través de @use y @forward.
+        // ejemplo: additionalData: \\\`@use "./src/sass/abstracts/variables" as *;\\\`
+        // Nota: Muchos parciales ahora incluyen automáticamente este tipo de importación.
       }
     }
   }
@@ -232,30 +231,30 @@ export default defineConfig({
 `;
 
 export const SCSS_MAIN_SCSS_CONTENT = `
-// This is the main SASS file that will be imported by your JavaScript (src/main.js).
-// It is located at src/sass/main.scss.
-// It uses the _index.scss file in the same directory (src/sass/_index.scss) to load the entire 7-1 structure.
+// Este es el archivo SASS principal que será importado por tu JavaScript (src/main.js).
+// Se encuentra en src/sass/main.scss.
+// Utiliza el archivo _index.scss en el mismo directorio (src/sass/_index.scss) para cargar toda la estructura 7-1.
 @use "index" as *;
 
-// You can add global styles here if absolutely necessary,
-// but it's generally better to keep them within the 7-1 structure.
-// For example, to test, try uncommenting:
+// Puedes agregar estilos globales aquí si es absolutamente necesario,
+// pero generalmente es mejor mantenerlos dentro de la estructura 7-1.
+// Por ejemplo, para probar, intenta descomentar:
 // body {
-//   background-color: lightcoral; // Example using a named color
+//   background-color: lightcoral; // Ejemplo usando un color nombrado
 // }
 
-// To use variables from _variables.scss, ensure they are defined there
-// and then use them. For example, if $primary-color is defined:
+// Para usar variables de _variables.scss, asegúrate de que estén definidas allí
+// y luego úsalas. Por ejemplo, si $primary-color está definido:
 // body {
-//   // If _variables.scss is forwarded without a namespace by abstracts/_index.scss (in src/sass/abstracts/)
-//   // and abstracts/_index.scss is forwarded by _index.scss (in src/sass/):
+//   // Si _variables.scss se reenvía sin un espacio de nombres por abstracts/_index.scss (en src/sass/abstracts/)
+//   // y abstracts/_index.scss se reenvía por _index.scss (en src/sass/):
 //   color: $primary-color;
 // }
 `;
 
 export const SCSS_INDEX_SCSS_CONTENT = `
-// Aggregates all 7 top-level directories of the 7-1 pattern.
-// Located at src/sass/_index.scss
+// Agrega todos los 7 directorios principales del patrón 7-1.
+// Se encuentra en src/sass/_index.scss
 @forward "abstracts";
 @forward "base";
 @forward "components";
@@ -266,9 +265,9 @@ export const SCSS_INDEX_SCSS_CONTENT = `
 `;
 
 export const SCSS_ABSTRACTS_INDEX_SCSS_CONTENT = `
-// Forwards all SASS tools and helpers.
-// Located at src/sass/abstracts/_index.scss
-// By default, members of forwarded modules are available without a namespace.
+// Reenvía todas las herramientas y helpers de SASS.
+// Se encuentra en src/sass/abstracts/_index.scss
+// Por defecto, los miembros de los módulos reenviados están disponibles sin un espacio de nombres.
 @forward "variables";
 @forward "mixins";
 @forward "functions";
@@ -276,16 +275,16 @@ export const SCSS_ABSTRACTS_INDEX_SCSS_CONTENT = `
 
 export const SCSS_ABSTRACTS_VARIABLES_SCSS_CONTENT = `
 // SCSS Variables
-// Located at src/sass/abstracts/_variables.scss
-// Define your global SASS variables here.
-// Examples:
+// Se encuentra en src/sass/abstracts/_variables.scss
+// Define tus variables SASS globales aquí.
+// Ejemplos:
 // $primary-color: #007bff;
 // $secondary-color: #6c757d;
 // $background-color: #f8f9fa;
 // $text-color: #212529;
 
 // $font-family-base: 'Arial', sans-serif;
-// $font-size-base: 1rem; // Typically 16px
+// $font-size-base: 1rem; // Típicamente 16px
 
 // $breakpoint-sm: 576px;
 // $breakpoint-md: 768px;
@@ -293,30 +292,30 @@ export const SCSS_ABSTRACTS_VARIABLES_SCSS_CONTENT = `
 // $breakpoint-xl: 1200px;
 
 // Initial test variable
-$test-variable-color: #ff00ff; // Magenta, for easy identification
+$test-variable-color: #ff00ff; // Magenta, para fácil identificación
 `;
 
 export const SCSS_ABSTRACTS_MIXINS_SCSS_CONTENT = `
 // SCSS Mixins
-// Located at src/sass/abstracts/_mixins.scss
-// Define your global SASS mixins here.
+// Se encuentra en src/sass/abstracts/_mixins.scss
+// Define tus mixins SASS globales aquí.
 
-// Example Breakpoint Mixin (using min-width for a mobile-first approach)
+// Ejemplo de Mixin de Breakpoint (usando min-width para un enfoque móvil primero)
 // @mixin breakpoint($point) {
-//   @if $point == sm { // Small screens (e.g., phones)
+//   @if $point == sm { // Pantallas pequeñas (por ejemplo, teléfonos)
 //     @media (min-width: 576px) { @content; }
-//   } @else if $point == md { // Medium screens (e.g., tablets)
+//   } @else if $point == md { // Pantallas medianas (por ejemplo, tabletas)
 //     @media (min-width: 768px) { @content; }
-//   } @else if $point == lg { // Large screens (e.g., desktops)
+//   } @else if $point == lg { // Pantallas grandes (por ejemplo, escritorios)
 //     @media (min-width: 992px) { @content; }
-//   } @else if $point == xl { // Extra large screens (e.g., large desktops)
+//   } @else if $point == xl { // Pantallas extra grandes (por ejemplo, escritorios grandes)
 //     @media (min-width: 1200px) { @content; }
 //   } @else {
 //     @warn "Breakpoint '#{$point}' not recognized. Available: sm, md, lg, xl.";
 //   }
 // }
 
-// Example: Clearfix
+// Ejemplo: Clearfix
 // @mixin clearfix {
 //   &::after {
 //     content: "";
@@ -328,9 +327,9 @@ export const SCSS_ABSTRACTS_MIXINS_SCSS_CONTENT = `
 
 export const SCSS_ABSTRACTS_FUNCTIONS_SCSS_CONTENT = `
 // SCSS Functions
-// Located at src/sass/abstracts/_functions.scss
-// Define your global SASS functions here.
-// Example:
+// Se encuentra en src/sass/abstracts/_functions.scss
+// Define tus funciones SASS globales aquí.
+// Ejemplo:
 // @function rem($pixels, $context: 16px) {
 //   @return ($pixels / $context) * 1rem;
 // }
@@ -338,19 +337,19 @@ export const SCSS_ABSTRACTS_FUNCTIONS_SCSS_CONTENT = `
 
 export const SCSS_BASE_INDEX_SCSS_CONTENT = `
 // Forwards base SASS partials.
-// Located at src/sass/base/_index.scss
+// Se encuentra en src/sass/base/_index.scss
 @forward "reset";
 @forward "typography";
 @forward "base";
 `;
 
-export const SCSS_BASE_BASE_SCSS_CONTENT = `// Import abstracts for easy access
-// Located at src/sass/base/_base.scss
+export const SCSS_BASE_BASE_SCSS_CONTENT = `// Importar abstracts para un acceso fácil.
+// Se encuentra en src/sass/base/_base.scss
 @use "../abstracts" as *;
 
-// Base element styling
-// Styles for HTML elements like body, a, etc.
-// Example:
+// Estilo de elementos base.
+// Estilos para elementos HTML como body, a, etc.
+// Ejemplo:
 // body {
 //   font-family: $font-family-base;
 //   font-size: $font-size-base;
@@ -361,16 +360,14 @@ export const SCSS_BASE_BASE_SCSS_CONTENT = `// Import abstracts for easy access
 `;
 
 export const SCSS_COMPONENTS_INDEX_SCSS_CONTENT = `
-// Forwards SASS partials for individual components.
-// Located at src/sass/components/_index.scss
+// Reenvía los parciales SASS para componentes individuales.
+// Ubicado en src/sass/components/_index.scss
 @forward "button";
 @forward "modal";
-@forward "sun";
-@forward "moon";
 `;
 
-export const SCSS_COMPONENTS_MODAL_SCSS_CONTENT = `// Import abstracts for easy access
-// Located at src/sass/components/_modal.scss
+export const SCSS_COMPONENTS_MODAL_SCSS_CONTENT = `// Importar abstracts para un acceso fácil.
+// Ubicado en src/sass/components/_modal.scss
 @use "../abstracts" as *;
 
 // Component: Modal
@@ -380,38 +377,16 @@ export const SCSS_COMPONENTS_MODAL_SCSS_CONTENT = `// Import abstracts for easy 
 // }
 `;
 
-export const SCSS_COMPONENTS_SUN_SCSS_CONTENT = `// Import abstracts for easy access
-// Located at src/sass/components/_sun.scss
-@use "../abstracts" as *;
-
-// Component: Sun
-// Styles for a sun icon or element (e.g., for light mode toggle).
-// .sun-icon {
-//   // styles...
-// }
-`;
-
-export const SCSS_COMPONENTS_MOON_SCSS_CONTENT = `// Import abstracts for easy access
-// Located at src/sass/components/_moon.scss
-@use "../abstracts" as *;
-
-// Component: Moon
-// Styles for a moon icon or element (e.g., for dark mode toggle).
-// .moon-icon {
-//   // styles...
-// }
-`;
-
 export const SCSS_LAYOUT_INDEX_SCSS_CONTENT = `
-// Forwards SASS partials for layout elements.
-// Located at src/sass/layout/_index.scss
+// Reenvía los parciales SASS para elementos de diseño.
+// Ubicado en src/sass/layout/_index.scss
 @forward "grid";
 @forward "header";
 @forward "footer";
 `;
 
-export const SCSS_LAYOUT_FOOTER_SCSS_CONTENT = `// Import abstracts for easy access
-// Located at src/sass/layout/_footer.scss
+export const SCSS_LAYOUT_FOOTER_SCSS_CONTENT = `// Importar abstracts para un acceso fácil
+// Ubicado en src/sass/layout/_footer.scss
 @use "../abstracts" as *;
 
 // Layout: Footer
@@ -422,23 +397,23 @@ export const SCSS_LAYOUT_FOOTER_SCSS_CONTENT = `// Import abstracts for easy acc
 `;
 
 export const SCSS_PAGES_INDEX_SCSS_CONTENT = `
-// Forwards SASS partials for page-specific styles.
-// Located at src/sass/pages/_index.scss
+// Reenvía los parciales SASS para estilos específicos de página.
+// Ubicado en src/sass/pages/_index.scss
 @forward "home";
 // @forward "contact";
 `;
 
 export const SCSS_THEMES_INDEX_SCSS_CONTENT = `
-// Forwards SASS partials for themes.
-// Located at src/sass/themes/_index.scss
+// Reenvía los parciales SASS para temas.
+// Ubicado en src/sass/themes/_index.scss
 @forward "spring";
 @forward "summer";
 @forward "autumn";
 @forward "winter";
 `;
 
-export const SCSS_THEMES_SPRING_SCSS_CONTENT = `// Import abstracts for easy access
-// Located at src/sass/themes/_spring.scss
+export const SCSS_THEMES_SPRING_SCSS_CONTENT = `// Importar abstracts para un acceso fácil
+// Ubicado en src/sass/themes/_spring.scss
 @use "../abstracts" as *;
 
 // Theme: Spring
@@ -447,8 +422,8 @@ export const SCSS_THEMES_SPRING_SCSS_CONTENT = `// Import abstracts for easy acc
 //   // styles...
 // }
 `;
-export const SCSS_THEMES_SUMMER_SCSS_CONTENT = `// Import abstracts for easy access
-// Located at src/sass/themes/_summer.scss
+export const SCSS_THEMES_SUMMER_SCSS_CONTENT = `// Importar abstracts para un acceso fácil
+// Ubicado en src/sass/themes/_summer.scss
 @use "../abstracts" as *;
 
 // Theme: Summer
@@ -457,8 +432,8 @@ export const SCSS_THEMES_SUMMER_SCSS_CONTENT = `// Import abstracts for easy acc
 //   // styles...
 // }
 `;
-export const SCSS_THEMES_AUTUMN_SCSS_CONTENT = `// Import abstracts for easy access
-// Located at src/sass/themes/_autumn.scss
+export const SCSS_THEMES_AUTUMN_SCSS_CONTENT = `// Importar abstracts para un acceso fácil
+// Ubicado en src/sass/themes/_autumn.scss
 @use "../abstracts" as *;
 
 // Theme: Autumn
@@ -467,8 +442,8 @@ export const SCSS_THEMES_AUTUMN_SCSS_CONTENT = `// Import abstracts for easy acc
 //   // styles...
 // }
 `;
-export const SCSS_THEMES_WINTER_SCSS_CONTENT = `// Import abstracts for easy access
-// Located at src/sass/themes/_winter.scss
+export const SCSS_THEMES_WINTER_SCSS_CONTENT = `// Importar abstracts para un acceso fácil
+// Ubicado en src/sass/themes/_winter.scss
 @use "../abstracts" as *;
 
 // Theme: Winter
@@ -479,9 +454,9 @@ export const SCSS_THEMES_WINTER_SCSS_CONTENT = `// Import abstracts for easy acc
 `;
 
 export const SCSS_VENDORS_INDEX_SCSS_CONTENT = `
-// Forwards SASS partials for vendor styles (if any).
-// Located at src/sass/vendors/_index.scss
-// Example:
+// Reenvía los parciales SASS para estilos de proveedores (si los hay).
+// Ubicado en src/sass/vendors/_index.scss
+// Ejemplo:
 // @forward "normalize";
 // @forward "some-other-vendor-library";
 `;
@@ -544,6 +519,6 @@ Estos son los puntos a revisar en el código fuente del **propio generador** (pr
 
 ¡Mucha suerte con tu versión del generador!
 `;
-// Placeholder for old README_MD_CONTENT if needed by other parts of the app, otherwise it can be removed.
-// For this change, we are replacing it with README_ES_MD_CONTENT for generation.
-export const README_MD_CONTENT = `This is a placeholder for the old English README. The generator now uses README_ES_MD_CONTENT.`;
+// Marcador de posición para el antiguo README_MD_CONTENT si es necesario por otras partes de la aplicación, de lo contrario se puede eliminar.
+// Para este cambio, lo estamos reemplazando con README_ES_MD_CONTENT para la generación.
+export const README_MD_CONTENT = `Este es un marcador de posición para el antiguo README en inglés. El generador ahora utiliza README_ES_MD_CONTENT.`;

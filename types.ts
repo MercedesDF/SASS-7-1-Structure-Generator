@@ -1,5 +1,4 @@
-
 export interface OutputFile {
-  path: string; // Full path including directory, e.g., "scss/abstracts/_variables.scss" or "readme.md"
+  path: string; // Ruta completa incluyendo el directorio, por ejemplo,, "scss/abstracts/_variables.scss" o "readme.md"
   content: string;
 }

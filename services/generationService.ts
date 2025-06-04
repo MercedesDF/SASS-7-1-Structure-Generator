@@ -2,28 +2,28 @@
 import type { OutputFile } from '../types';
 import {
   MAIN_JS_CONTENT,
-  README_ES_MD_CONTENT, // Use Spanish README
+  README_ES_MD_CONTENT, 
   VITE_CONFIG_JS_CONTENT,
   SCSS_MAIN_SCSS_CONTENT,
   SCSS_INDEX_SCSS_CONTENT,
   SCSS_ABSTRACTS_INDEX_SCSS_CONTENT,
   SCSS_ABSTRACTS_VARIABLES_SCSS_CONTENT,
   SCSS_ABSTRACTS_MIXINS_SCSS_CONTENT,
-  SCSS_ABSTRACTS_FUNCTIONS_SCSS_CONTENT, // New
+  SCSS_ABSTRACTS_FUNCTIONS_SCSS_CONTENT, 
   SCSS_BASE_INDEX_SCSS_CONTENT,
-  SCSS_BASE_BASE_SCSS_CONTENT, // New
+  SCSS_BASE_BASE_SCSS_CONTENT, 
   SCSS_COMPONENTS_INDEX_SCSS_CONTENT,
-  SCSS_COMPONENTS_MODAL_SCSS_CONTENT, // New
-  SCSS_COMPONENTS_SUN_SCSS_CONTENT, // New
-  SCSS_COMPONENTS_MOON_SCSS_CONTENT, // New
+  SCSS_COMPONENTS_MODAL_SCSS_CONTENT,
+  SCSS_COMPONENTS_SUN_SCSS_CONTENT, 
+  SCSS_COMPONENTS_MOON_SCSS_CONTENT, 
   SCSS_LAYOUT_INDEX_SCSS_CONTENT,
-  SCSS_LAYOUT_FOOTER_SCSS_CONTENT, // New
+  SCSS_LAYOUT_FOOTER_SCSS_CONTENT, 
   SCSS_PAGES_INDEX_SCSS_CONTENT,
   SCSS_THEMES_INDEX_SCSS_CONTENT,
-  SCSS_THEMES_SPRING_SCSS_CONTENT, // New
-  SCSS_THEMES_SUMMER_SCSS_CONTENT, // New
-  SCSS_THEMES_AUTUMN_SCSS_CONTENT, // New
-  SCSS_THEMES_WINTER_SCSS_CONTENT, // New
+  SCSS_THEMES_SPRING_SCSS_CONTENT, 
+  SCSS_THEMES_SUMMER_SCSS_CONTENT, 
+  SCSS_THEMES_AUTUMN_SCSS_CONTENT, 
+  SCSS_THEMES_WINTER_SCSS_CONTENT, 
   SCSS_VENDORS_INDEX_SCSS_CONTENT,
   LICENSE_TEMPLATE,
   GENERATED_INDEX_HTML_CONTENT
@@ -33,23 +33,23 @@ const IMPORT_ABSTRACTS_LINE = '// Import abstracts for easy access\n@use "../abs
 
 export const generateSassStructure = (): OutputFile[] => {
   const currentYear = new Date().getFullYear();
-  const holder = "[YOUR COMPANY/NAME HERE]"; // Always use placeholder
+  const holder = "[YOUR COMPANY/NAME HERE]"; 
 
   const licenseContent = LICENSE_TEMPLATE
     .replace(/{YEAR}/g, currentYear.toString())
     .replace(/{COPYRIGHT_HOLDER}/g, holder);
 
   const files: OutputFile[] = [
-    // Root files
+    // Archivos raíz
     { path: 'index.html', content: GENERATED_INDEX_HTML_CONTENT },
     { path: 'LICENSE', content: licenseContent },
-    { path: 'README.md', content: README_ES_MD_CONTENT }, // Use Spanish README
+    { path: 'README.md', content: README_ES_MD_CONTENT }, 
     { path: 'vite.config.js', content: VITE_CONFIG_JS_CONTENT },
 
-    // src directory
+    // src directorio
     { path: 'src/main.js', content: MAIN_JS_CONTENT },
 
-    // src/sass directory root
+    // src/sass directorio raíz
     { path: 'src/sass/main.scss', content: SCSS_MAIN_SCSS_CONTENT },
     { path: 'src/sass/_index.scss', content: SCSS_INDEX_SCSS_CONTENT },
 
@@ -91,7 +91,7 @@ export const generateSassStructure = (): OutputFile[] => {
 
     // src/sass/vendors
     { path: 'src/sass/vendors/_index.scss', content: SCSS_VENDORS_INDEX_SCSS_CONTENT },
-    // No default _normalize.scss in this new structure, user can add if needed.
+    // No hay _normalize.scss por defecto en esta estructura, el usuario puede agregarlo si es necesario.
   ];
 
   return files;
