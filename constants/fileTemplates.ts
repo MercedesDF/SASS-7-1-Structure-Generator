@@ -1,7 +1,7 @@
 export const MAIN_JS_CONTENT = `
 import './sass/main.scss';
 
-console.log('SASS 7-1 structure initialized. Estilos cargados desde src/sass/main.scss. Abre index.html para ver una página de prueba.');
+console.log('SASS 7-1 structure inicializado. Estilos cargados desde src/sass/main.scss. Abre index.html para ver una página de prueba.');
 `;
 
 export const GENERATED_INDEX_HTML_CONTENT = `<!DOCTYPE html>
